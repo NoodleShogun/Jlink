@@ -2,10 +2,10 @@ import javax.swing.*;
 import java.awt.*;
 
 
-public class Gui extends JPanel {
+class Gui extends JPanel {
 
 
-    public Gui(){
+    Gui() {
   //creates components to add the the class Panel
 createComp();
 
@@ -38,16 +38,12 @@ createComp();
 
  textAreaWriter.setEnabled(true);
  textAreaWriter.setPreferredSize(new Dimension(850, 415));
- textAreaWriter.
+
 
  //add objects to Panels
 
-
-
-
-
- add(hotBar, border.NORTH);
- add(textArea,border.CENTER);
+      add(hotBar, border.NORTH);
+      add(textArea, border.CENTER);
 
 
 
