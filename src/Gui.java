@@ -25,7 +25,7 @@ createComp();
   //create Component objects
  JPanel hotBar = new JPanel();
  JPanel textArea = new JPanel();
- JTextArea textAreaWriter = new JTextArea();
+      writer writer = new writer();
 
  //set component object properties
  hotBar.setBackground(Color.black);
@@ -36,11 +36,8 @@ createComp();
  textArea.setForeground(Color.white);
  textArea.setPreferredSize(new Dimension(850, 415));
 
- textAreaWriter.setEnabled(true);
- textAreaWriter.setPreferredSize(new Dimension(850, 415));
 
-
- //add objects to Panels
+      //add objects to Panels
 
       add(hotBar, BorderLayout.NORTH);
       add(textArea, BorderLayout.CENTER);
