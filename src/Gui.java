@@ -42,8 +42,8 @@ createComp();
 
  //add objects to Panels
 
-      add(hotBar, border.NORTH);
-      add(textArea, border.CENTER);
+      add(hotBar, BorderLayout.NORTH);
+      add(textArea, BorderLayout.CENTER);
 
 
 
