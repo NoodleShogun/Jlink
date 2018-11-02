@@ -41,11 +41,11 @@ createComp();
 
       scroller.setPreferredSize(new Dimension(930, 467));
 
-      //add objects to Panels
-
-
+      //add objects to Panel
       add(hotBar, BorderLayout.NORTH);
       add(textArea, BorderLayout.CENTER);
+
+      //adds stuff to Objects
       textArea.add(scroller);
 
 

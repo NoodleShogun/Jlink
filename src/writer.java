@@ -1,5 +1,7 @@
 import javax.swing.*;
+import javax.swing.text.Document;
 import java.awt.*;
+import java.io.File;
 
 
 class writer extends JTextArea {
@@ -15,14 +17,26 @@ class writer extends JTextArea {
         setLineWrap(true);
 
 
-        createComps();
+
+
+    }
+
+    public void saveToDocument(String docName) {
+
+
+    }
+
+    public void saveToDocument(Document doc) {
+
 
     }
 
 
-    private void createComps() {
+    public void loadDocument(File file) {
 
 
     }
+
+
 
 }
