@@ -34,6 +34,7 @@ createComp();
  hotBar.setBackground(Color.black);
  hotBar.setForeground(Color.white);
  hotBar.setPreferredSize(new Dimension(850, 25));
+      hotBar.setLayout(new GridLayout(850, 1));
 
  textArea.setBackground(Color.white);
  textArea.setForeground(Color.white);
