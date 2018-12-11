@@ -1,12 +1,6 @@
 import javax.swing.*;
-import javax.swing.text.Document;
 import java.awt.*;
-import java.io.FileReader;
-import java.io.FileNotFoundException;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.FileWriter;
+import java.io.*;
 
 class writer extends JTextArea {
 
@@ -25,14 +19,14 @@ class writer extends JTextArea {
 
     }
 
-    public void saveToDocument(String docName) {
+    public void saveToDocument(String docName, String dir) {
         String docText = paramString();
 
         try {
 
-            FileWriter savedFile = new FileWriter(docName);
+            File savedFile = new File(docName, dir);
 
-            BufferedWriter bufferedWriter = new BufferedWriter(savedFile);
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(savedFile));
 
             bufferedWriter.write(docText);
 
@@ -49,16 +43,16 @@ class writer extends JTextArea {
     }
 
 
-    public void loadDocument(String file) {
+    public void loadDocument(String file, String dir) {
 
 
         String line;
 
         try {
 
-            FileReader loadedFile = new FileReader(file);
+            File loadedFile = new File(file, dir);
 
-            BufferedReader bufferedReader = new BufferedReader(loadedFile);
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(loadedFile));
 
             while ((line = bufferedReader.readLine()) != null) {
 
