@@ -4,8 +4,9 @@ import java.awt.*;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
-
+import java.io.FileWriter;
 
 class writer extends JTextArea {
 
@@ -24,13 +25,25 @@ class writer extends JTextArea {
 
     }
 
-    public static void saveToDocument(String docName) {
+    public void saveToDocument(String docName) {
+        String docText = paramString();
+
+        try {
+
+            FileWriter savedFile = new FileWriter(docName);
+
+            BufferedWriter bufferedWriter = new BufferedWriter(savedFile);
+
+            bufferedWriter.write(docText);
+
+            bufferedWriter.close();
+
+        } catch (IOException ex) {
+            System.out.println("Could not save to that loaction or something fucked up");
+
+        }
 
 
-
-    }
-
-    public static void saveToDocument(Document doc) {
 
 
     }
@@ -39,7 +52,7 @@ class writer extends JTextArea {
     public void loadDocument(String file) {
 
 
-        String line = null;
+        String line;
 
         try {
 
