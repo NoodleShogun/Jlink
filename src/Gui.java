@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 class Gui extends JPanel {
@@ -23,15 +25,22 @@ createComp();
 
 
   //create Component objects
-      toolBar hotBar = new toolBar();
- JPanel textArea = new JPanel();
-
+      JPanel hotBar = new JPanel();
+      JPanel textArea = new JPanel();
       writer writer = new writer(150, 150);
       JScrollPane scroller = new JScrollPane(writer);
 
-
+      JButton save = new JButton("save");
+      JButton load = new JButton("load");
 
  //set component object properties
+
+
+      hotBar.setBackground(Color.white);
+      hotBar.setForeground(Color.white);
+      hotBar.setPreferredSize(new Dimension(850, 25));
+      hotBar.setLayout(new GridLayout(1, 16));
+
       textArea.setBackground(Color.white);
       textArea.setForeground(Color.white);
       textArea.setPreferredSize(new Dimension(850, 500));
@@ -44,12 +53,24 @@ createComp();
 
       //adds stuff to Objects
       textArea.add(scroller);
+      hotBar.add(save);
+      hotBar.add(load);
+
+      save.addActionListener(new ActionListener() {
+          @Override
+          public void actionPerformed(ActionEvent e) {
 
 
+          }
+      });
+
+      load.addActionListener(new ActionListener() {
+          @Override
+          public void actionPerformed(ActionEvent e) {
 
 
-
-
+          }
+      });
 
 
  }

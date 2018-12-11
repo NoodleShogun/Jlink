@@ -20,8 +20,10 @@ class writer extends JTextArea {
     }
 
     public void saveToDocument(String docName, String dir) {
+
         String docText = paramString();
 
+        //try to see if data from Writer class can be saved to the file
         try {
 
             File savedFile = new File(docName, dir);
@@ -33,6 +35,7 @@ class writer extends JTextArea {
             bufferedWriter.close();
 
         } catch (IOException ex) {
+            //if not print this out V
             System.out.println("Could not save to that loaction or something fucked up");
 
         }
