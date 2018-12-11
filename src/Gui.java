@@ -23,21 +23,17 @@ createComp();
 
 
   //create Component objects
- JPanel hotBar = new JPanel();
+      toolBar hotBar = new toolBar();
  JPanel textArea = new JPanel();
 
       writer writer = new writer(150, 150);
       JScrollPane scroller = new JScrollPane(writer);
 
 
- //set component object properties
- hotBar.setBackground(Color.black);
- hotBar.setForeground(Color.white);
- hotBar.setPreferredSize(new Dimension(850, 25));
-      hotBar.setLayout(new GridLayout(850, 1));
 
- textArea.setBackground(Color.white);
- textArea.setForeground(Color.white);
+ //set component object properties
+      textArea.setBackground(Color.white);
+      textArea.setForeground(Color.white);
       textArea.setPreferredSize(new Dimension(850, 500));
 
       scroller.setPreferredSize(new Dimension(930, 467));
