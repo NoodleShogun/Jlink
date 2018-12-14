@@ -21,14 +21,14 @@ class writer extends JTextArea {
 
     public void saveToDocument(String docName, String dir) {
 
-        String docText = paramString();
+        String docText = getText();
 
         //try to see if data from Writer class can be saved to the file
         try {
 
-            File savedFile = new File(docName, dir);
+            FileWriter savedFile = new FileWriter(dir + "\\" + docName + ".txt");
 
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(savedFile));
+            BufferedWriter bufferedWriter = new BufferedWriter(savedFile);
 
             bufferedWriter.write(docText);
 
@@ -36,7 +36,7 @@ class writer extends JTextArea {
 
         } catch (IOException ex) {
             //if not print this out V
-            System.out.println("Could not save to that loaction or something fucked up");
+            System.out.println("Could not save to that location or something fucked up");
 
         }
 
@@ -53,9 +53,9 @@ class writer extends JTextArea {
 
         try {
 
-            File loadedFile = new File(file, dir);
+            FileReader loadedFile = new FileReader(dir + "\\" + file + ".txt");
 
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(loadedFile));
+            BufferedReader bufferedReader = new BufferedReader(loadedFile);
 
             while ((line = bufferedReader.readLine()) != null) {
 

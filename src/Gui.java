@@ -59,7 +59,9 @@ createComp();
       save.addActionListener(new ActionListener() {
           @Override
           public void actionPerformed(ActionEvent e) {
+              System.out.println("Saving File");
 
+              writer.saveToDocument("Untitled", "C:\\Users\\longl\\Documents");
 
           }
       });
@@ -67,8 +69,9 @@ createComp();
       load.addActionListener(new ActionListener() {
           @Override
           public void actionPerformed(ActionEvent e) {
+              System.out.println("Loading File");
 
-
+              writer.loadDocument("Untitled", "C:\\Users\\longl\\Documents");
           }
       });
 
